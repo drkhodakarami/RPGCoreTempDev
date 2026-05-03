@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="BaseInfo_Info_Panel" style="flex-grow: 1;">
+        <ui:TextField picking-mode="Ignore" label="ID:" name="BaseInfo_ID_TextField" style="flex-grow: 0; width: auto; flex-basis: auto; flex-direction: row; flex-shrink: 0;" />
+        <ui:TextField picking-mode="Ignore" label="Name" name="BaseInfo_Name_TextField" style="flex-grow: 0;" />
+        <ui:TextField picking-mode="Ignore" label="Display Name" name="BaseInfo_DisplayName_TextField" style="flex-grow: 0;" />
+        <ui:TextField picking-mode="Ignore" label="Description" multiline="true" name="BaseInfo_Description_TextField" style="flex-grow: 0; height: 40px;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="ListEntry_Panel_X" style="flex-direction: row; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;">
+        <ui:Image name="ListEntry_X_Icon_Image" style="width: 30px; height: 30px; background-image: none; margin-right: 10px;" />
+        <ui:Label tabindex="-1" text="Name" display-tooltip-when-elided="true" name="ListEntry_X_Name_Label" style="-unity-text-align: middle-left;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="SettingsPanelMenuToolbar" src="project://database/Assets/RPG%20Core/Editor/Resources/UIToolkit/Documents/BasePanels/SettingsPanelMenuToolbar.uxml?fileID=9197481963319205126&amp;guid=8226c22eb9900864289ce3c6f18235ad&amp;type=3#SettingsPanelMenuToolbar" />
+    <ui:Template name="BaseInfoFoldout" src="project://database/Assets/RPG%20Core/Editor/Resources/UIToolkit/Documents/BasePanels/BaseInfoSection/BaseInfoFoldout.uxml?fileID=9197481963319205126&amp;guid=ab18a22025c1bcd4cad062f64b7eb7b4&amp;type=3#BaseInfoFoldout" />
+    <ui:VisualElement name="Window" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="Left_Panel" style="width: 30%; flex-grow: 1; height: 100%; flex-shrink: 1;">
+            <ui:VisualElement name="SearchSection_Panel" style="flex-direction: row;">
+                <ui:TextField picking-mode="Ignore" name="SearchFilter_TextField" style="flex-grow: 1;" />
+                <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font: url(&apos;project://database/Assets/RPG%20Core/Editor/Fonts/Font%20Acesome%206/FONT%20AWESOME%206%20DUOTONE-REGULAR-400.OTF?fileID=12800000&amp;guid=0ecb6ea26dc204e41951437d4bbedcf5&amp;type=3#FONT AWESOME 6 DUOTONE-REGULAR-400&apos;); font-size: 14px; -unity-font-definition: none; margin-top: 0; -unity-text-align: middle-left;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="LeftList_Panel" style="flex-grow: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; height: auto; flex-shrink: 1; max-height: none; min-height: auto;">
+                <ui:GroupBox name="LeftList_GroupBox" style="flex-grow: 1; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.31); border-right-color: rgba(0, 0, 0, 0.31); border-top-color: rgba(0, 0, 0, 0.31); border-bottom-color: rgba(0, 0, 0, 0.31); margin-left: 3px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 428px; flex-shrink: 0;">
+                    <ui:ScrollView name="LeftList_ScrollView" />
+                </ui:GroupBox>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightPanel" style="flex-grow: 1; margin-right: 4px;">
+            <ui:Instance template="SettingsPanelMenuToolbar" name="SettingsPanelMenuToolbar" />
+            <ui:ScrollView>
+                <ui:Instance template="BaseInfoFoldout" name="BaseInfoFoldout" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,130 @@
+using UnityEngine;
+using UnityEditor;
+
+namespace Mentor.Editor
+{
+    public class FolderCreation
+    {
+        private static string[] folders = new string[]
+        {
+            "Assets/Animations/Characters",
+            "Assets/Audios/Characters",
+            "Assets/Audios/Environments",
+            "Assets/Audios/GUI",
+            "Assets/Audios/Props",
+            "Assets/Models/Buildings",
+            "Assets/Models/Characters/Armor",
+            "Assets/Models/Characters/Body",
+            "Assets/Models/Characters/Cloth",
+            "Assets/Models/Foliage/Fruits",
+            "Assets/Models/Foliage/Grasses",
+            "Assets/Models/Foliage/Trees",
+            "Assets/Models/Props/Loots",
+            "Assets/Models/Terrains",
+            "Assets/Navmeshes",
+            "Assets/Particles/Effects/",
+            "Assets/Particles/Environments/",
+            "Assets/Textures/Buildings/",
+            "Assets/Textures/Characters/Armor",
+            "Assets/Textures/Characters/Body",
+            "Assets/Textures/Characters/Cloth",
+            "Assets/Textures/Foliage/Fruits",
+            "Assets/Textures/Foliage/Grasses",
+            "Assets/Textures/Foliage/Trees",
+            "Assets/Textures/GUI/Characters",
+            "Assets/Textures/GUI/Effects",
+            "Assets/Textures/GUI/HUD",
+            "Assets/Textures/GUI/Items/Armors",
+            "Assets/Textures/GUI/Items/Cloths",
+            "Assets/Textures/GUI/Items/Consumables",
+            "Assets/Textures/GUI/Items/Ingredients",
+            "Assets/Textures/GUI/Windows",
+            "Assets/Textures/Props/Loots",
+            "Assets/Textures/Terrains",
+            "Assets/Textures/Waters",
+            "Assets/Textures/Weathers",
+            "Editor/Fonts",
+            "Editor/Resources/UIToolkit/Documents",
+            "Editor/Resources/UIToolkit/Styles",
+            "Editor/Resources/UIToolkit/Themes/Runtime",
+            "Editor/Resources/UIToolkit/Themes/TSS",
+            "Editor/Scripts/Drawers",
+            "Editor/Scripts/MenuItems",
+            "Editor/Scripts/Windows",
+            "Editor/Textures/UI/Icons",
+            "Prefabs/Buildings",
+            "Prefabs/Characters/Animals",
+            "Prefabs/Characters/Bosses",
+            "Prefabs/Characters/Mobs",
+            "Prefabs/Characters/Passives",
+            "Prefabs/Characters/Players",
+            "Prefabs/Environments/Waters",
+            "Prefabs/Environments/Weathers",
+            "Prefabs/Foliage/Fruits",
+            "Prefabs/Foliage/Grasses",
+            "Prefabs/Foliage/Trees",
+            "Prefabs/FX",
+            "Prefabs/Genetics",
+            "Prefabs/GUI",
+            "Prefabs/Items",
+            "Prefabs/Lights",
+            "Prefabs/Particles",
+            "Prefabs/Props",
+            "Prefabs/Vehicles",
+            "Prefabs/Weapons",
+            "Resources/Database",
+            "Resources/Prefabs/Bases",
+            "Resources/Prefabs/Buildings",
+            "Resources/Prefabs/Characters/Animals",
+            "Resources/Prefabs/Characters/Bosses",
+            "Resources/Prefabs/Characters/Mobs",
+            "Resources/Prefabs/Characters/Passives",
+            "Resources/Prefabs/Characters/Players",
+            "Resources/Prefabs/Environments/Foliage/Fruits",
+            "Resources/Prefabs/Environments/Foliage/Grasses",
+            "Resources/Prefabs/Environments/Foliage/Trees",
+            "Resources/Prefabs/Environments/Rocks",
+            "Resources/Prefabs/Environments/Waters",
+            "Resources/Prefabs/Environments/Weathers",
+            "Resources/Prefabs/FX",
+            "Resources/Prefabs/Genetics",
+            "Resources/Prefabs/Items",
+            "Resources/Prefabs/Props",
+            "Resources/Prefabs/Vehicles",
+            "Resources/Prefabs/Weapons",
+            "Resources/UIToolkit/Documents",
+            "Resources/UIToolkit/Styles",
+            "Resources/UIToolkit/Themes/Runtime",
+            "Resources/UIToolkit/Themes/TSS",
+            "Scenes/Game",
+            "Scenes/GUI",
+            "Scripts/Base/DataTypes",
+            "Scripts/Base/Enums",
+            "Scripts/Base/Interfaces",
+            "Scripts/Base/Statics",
+            "Scripts/MonoBehaviours/Cameras",
+            "Scripts/MonoBehaviours/Logics/AI",
+            "Scripts/MonoBehaviours/Logics/Dialogues",
+            "Scripts/MonoBehaviours/Managers",
+            "Scripts/MonoBehaviours/NPCs",
+            "Scripts/MonoBehaviours/Players",
+            "Scripts/MonoBehaviours/Props",
+            "Scripts/MonoBehaviours/Saves",
+            "Scripts/MonoBehaviours/UI",
+            "Scripts/ScriptableObjects/Database",
+        };
+
+        [MenuItem("Assets/Mentor/Create Folder Hierarchy")]
+        public static void CreateFolders()
+        {
+            // Get the current selected folder in the Project window
+            string selectedPath = EditorHelpers.GetProjectWindowPath();
+
+            foreach (var folder in folders)
+                EditorHelpers.CreateFolder(selectedPath, folder);
+
+            AssetDatabase.Refresh();
+            Debug.Log("✅ Folder hierarchy created successfully in: " + selectedPath);
+        }
+    }
+}

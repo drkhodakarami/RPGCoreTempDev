@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="BaseInfoIconPanel" src="project://database/Assets/RPG%20Core/Editor/Resources/UIToolkit/UI%20Documents/BasePanels/BaseInfoIconPanel.uxml?fileID=9197481963319205126&amp;guid=4bb3aaee4cdfea847905044f62e525c1&amp;type=3" />
+    <ui:Template name="BaseInfoTextPanel" src="project://database/Assets/RPG%20Core/Editor/Resources/UIToolkit/UI%20Documents/BasePanels/BaseInfoTextPanel.uxml?fileID=9197481963319205126&amp;guid=1f7d344788d426f48b17834ffaf4d85c&amp;type=3" />
+    <ui:Foldout text="Base Info" name="BaseInfoSectionPanel_Foldout" value="true" style="flex-shrink: 0;">
+        <ui:VisualElement name="BaseInfoPanel" focusable="false" style="flex-direction: row; width: auto; height: auto; flex-grow: 0;">
+            <ui:Instance template="BaseInfoIconPanel" />
+            <ui:Instance template="BaseInfoTextPanel" />
+        </ui:VisualElement>
+    </ui:Foldout>
+</ui:UXML>
